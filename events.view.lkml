@@ -21,7 +21,7 @@ view: events {
     sql: ${TABLE}.created_at ;;
   }
 
-  dimension: type_id_ljakhghfdfdsdf {
+  dimension: type_id{
     type: number
     sql: ${TABLE}.type_id ;;
   }
