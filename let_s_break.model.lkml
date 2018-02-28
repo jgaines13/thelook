@@ -6,6 +6,7 @@ include: "*.dashboard.lookml"  # include all dashboards in this project
 # # Select the views that should be a part of this model,
 # # and define the joins that connect them together.
 #
+#somenote
 explore: order_items {
   join: orders {
     relationship: many_to_one
