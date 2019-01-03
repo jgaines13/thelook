@@ -33,6 +33,7 @@ explore: order_items_base {
     relationship: many_to_one
   }
 }
+
 explore: order_items_tbe {
   extension: required
   join: inventory_items {
@@ -53,14 +54,3 @@ explore: order_items_tbe {
     relationship: many_to_one
   }
 }
-
-
-explore: orders_pdt_datagroup {}
-explore: orders_pdt_trigger_value {}
-
-datagroup: hour_group {
-  sql_trigger: SELECT HOUR(CURTIME()) ;;
-  max_cache_age: "24 hours"
-}
-
-explore: users {}
