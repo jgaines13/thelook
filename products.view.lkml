@@ -34,7 +34,8 @@ view: products {
 
   dimension: retail_price {
     type: number
-    sql: ${TABLE}.retail_price ;;
+    sql: ${TABLE}.retail_price * 5 ;;
+  html: <p style="color: red">{{ value }}</p>;;
   }
 
   dimension: sku {
@@ -45,5 +46,6 @@ view: products {
   measure: count {
     type: count
     drill_fields: [id, item_name, inventory_items.count]
+    html: <p style="color: red">{{ value }}</p>;;
   }
 }
